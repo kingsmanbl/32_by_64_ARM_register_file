@@ -10,7 +10,7 @@ This project implements a 32x64-bit register file for a pipelined ARM microproce
 - Structural Design: Uses explicit gates (AND, OR, NAND, NOR, XOR, etc.) with a maximum of 4 inputs per gate and 50ps delay.
 - No RTL in Datapath: Implements logic using structural Verilog, with generate statements for hierarchy and no behavioral constructs (except for D flip-flops).
 
-## Implementation detail'
+## Implementation detail
 The register file is composed of the following components:
 - Registers: Each register is an array of 64 D flip-flops with an enable input.
 - 5:32 Decoder: Selects the target register for write operations by enabling the corresponding register's write enable signal. The decoder's most significant output is disconnected since register 31 is hardwired to zero.
